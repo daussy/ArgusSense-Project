@@ -4,12 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//布局组件
+import LayoutUI from './layoutComponent/LayoutUI.jsx'
+
+//路由组件
+import AppRouter from './routerComponent/AppRouter'
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     {/* <App /> */}
+//   <AppRouter></AppRouter>,
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <LayoutUI></LayoutUI>,
+//  <AppRouter></AppRouter>, 
+  document.getElementById('bootstrap-layout')
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

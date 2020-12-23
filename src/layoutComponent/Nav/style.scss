@@ -1,0 +1,57 @@
+.nav-self{
+    background-color: #ffffff;
+    position: relative;
+    
+    #clock{
+        position: absolute;
+        left: -100px;
+    }
+   
+ 
+   
+}
+// serviceChoose 
+.narbar-nav-self1{
+    margin-left: 20px;
+    .link-container{
+        color: #538eda;
+        text-decoration: none;
+        &:hover{
+            background-color:rgb(220, 232, 248);
+            color: #538eda;
+
+        }
+        &:active{
+            background-color: #538eda;
+            color: #ffffff;
+        }
+
+    }
+}
+
+//userNav
+.narbar-nav-self2{
+    position: absolute;
+    // left: 600px;
+    right: 0px;
+    margin-right: 20px;
+    .link-container{
+        border:1px solid #dce8f8;
+        color: #538eda;
+        border-radius: 5px;
+        &:hover{
+            background-color:rgb(220, 232, 248);
+            color: #ffffff;
+        }
+        &:active{
+            background-color: #538eda;
+            color: #ffffff;
+        }
+        &:any-link{
+            color: #538eda;
+
+        }
+    }
+
+}
+
