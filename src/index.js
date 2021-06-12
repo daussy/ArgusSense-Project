@@ -1,26 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
-//布局组件
-import LayoutUI from './layoutComponent/LayoutUI.jsx'
-
-//路由组件
-import AppRouter from './routerComponent/AppRouter'
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     {/* <App /> */}
-//   <AppRouter></AppRouter>,
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+// router
+import {BrowserRouter,Route,Switch,Redirect} from 'react-router-dom';
+import routerConfig from '../src/routerComponent/routeConfig';
 ReactDOM.render(
-  <LayoutUI></LayoutUI>,
-//  <AppRouter></AppRouter>, 
-  document.getElementById('bootstrap-layout')
+
+<BrowserRouter>
+<div className='app'>
+  <Switch>
+    {
+      //路由表有数据才遍历路由数据
+      routerConfig.length > 0 && routerConfig.map((item, index) => {
+        if (item.exact) {
+          return <Route key={index} exact={item.exact} path={item.path} component={item.component}></Route>
+        } else {
+        }
+      })
+    }
+  </Switch>
+  <Redirect to = "/UserLogin"></Redirect>
+</div>
+</BrowserRouter>
+  ,document.getElementById('bootstrap-layout')
 );
 
 

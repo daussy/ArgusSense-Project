@@ -1,21 +1,9 @@
 import React,{Component} from 'react';
 import style from './style.scss'
 
-const NavConfig = [
-    {
-        title:'装备远程运维与健康管理系统',
-        key:'microservice1',
-    },
-    {
-        title:'微服务2',
-        key:'microservice2',
-    },
-    {
-        title:'微服务3',
-        key:'microservice3',
-    },
 
-]
+import {NavLink,Redirect} from 'react-router-dom'
+import routeConfig from '@/routerComponent/routeConfig.js'
 
 export default class ServiceChoose extends Component{
     constructor(props){
@@ -23,24 +11,34 @@ export default class ServiceChoose extends Component{
 
     }
 
-    onClick =(e)=>{
-        console.log(e,'e')
-    }
-
+    // onClick =(e)=>{
+    //     console.log(e,'e')
+    // }
+  
     render(){
          return(
         <ul class="nav nav-tabs narbar-nav-self1" id="myTab" role="tablist">
             {
-                NavConfig.map((item,index)=>{
-                    return(
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link link-container " id="home-tab" data-toggle="tab" href="#home" 
-                        role="tab" aria-controls="home" aria-selected="true" onClick = {this.onClick.bind(item.key)}>
-                            {item.title}</a>
-                    </li>
-                    )
+                routeConfig.map((item,index)=>{
+                    if(item.children&&item.children.length>0){
+                        return(
+                            <NavLink key ={index} to={item.path}  exact ={true} 
+                            className="nav-link link-container "
+                                activeClassName ="active-navlink"
+                                id="v-pills-home-tab" data-toggle="pill"  role="tab" aria-controls="v-pills-home" >
+                                    <li className="nav-item" role="presentation">
+                                        <span >
+                                            {item.title}</span>
+                                    </li>
+                            </NavLink>
+        
+                            )
+                    }
+                
                 })
             }
+            {/* <Redirect to={"/Devproject"}></Redirect> */}
+
   
         </ul>
          );

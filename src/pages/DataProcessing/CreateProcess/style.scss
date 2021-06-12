@@ -1,0 +1,29 @@
+.card-item{
+    height: 30px;
+    background-color:rgba($color: 	#1d3557, $alpha:0.4) ;
+    width: 220px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    border-radius: 3px;
+    font-size: 18px;
+    height: 40px;
+    line-height: 30px;
+    box-shadow:2px 2px 5px rgba($color: #1d3557, $alpha: 0.3);
+
+}
+
+
+@import '@/index.scss';
+
+
+.normalBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    margin: 0;
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+    // border-radius: 8px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+
+}

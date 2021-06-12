@@ -1,0 +1,20 @@
+            "pId": "string",
+            "pid": "string",
+  严喆(1911311017)  19:25:28
+这个是父节点的意思，就是在你新增的时候，你选中的这个节点就相当于父节点，你是相对于这个父节点，新增一个节点
+
+严喆(1911311017)  19:26:03
+但是真正有用的是pid还是pId我忘了，具体接口的细节，你需要问一下刘燚\
+
+
+
+      // console.log(this.state.itemid)
+      // this.setState({
+      //   itemid: store.getState().DataProcessingreducer.itemid
+      // })
+      ////itemid: store.getState().DataProcessingreducer.defaultState.itemid会报错  undefined
+      ////上面那种方法会导致获取不到新的id
+    
+图像数据  dataType:1
+时序数据  dataType:2
+振动数据  dataType:3

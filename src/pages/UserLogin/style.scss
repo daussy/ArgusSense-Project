@@ -1,0 +1,129 @@
+@import '@/index.scss';
+.ModelBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+}
+
+.normalBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    margin: 0;
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+    // border-radius: 8px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+
+}
+.deleteBtn{
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+    &:hover{
+        // color: #ff0000;
+        box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+    }
+    
+}
+
+.userLogin-container{
+    // background-image: url('./userlogin-background1.jpg');
+    background-image: url('./visulization.jpg');
+    background-repeat: no-repeat;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    opacity: 0.9;
+    height: 100vh;
+
+    .userLogin-component{
+        position: absolute;
+        backdrop-filter: flur(25px);
+        width: 400px;
+        height: 400px;
+        border-radius: 25px;
+        background-color: rgba(236, 233, 233, 0.5);
+        box-shadow: 0px 15px 25px 0 rgba(109, 106, 106, 0.6),
+                     0px 0px 40px 0 rgba(121, 121, 121, 0.4);
+        
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        // width: 300px;
+        padding: 50px;
+        display: flex;
+        flex-direction: row; //水平排列
+        flex-wrap: nowrap; //不换行
+        justify-content : center; //项目在主轴上的对齐方式（居中）
+        align-items: center; //在交叉轴上如何对其
+        border-radius: 25px;
+        .button{
+            position: relative;
+            left: 50%;
+            top: 80%;
+            // margin-top: 50px;
+            line-height: 40px;
+            transform: translateX(-50%);
+            color: #fff;
+            // border: rgba($color: #FFF, $alpha: 0.5);
+            // border-right: rgba($color: #FFF, $alpha: 0.3);
+            // border-bottom: rgba($color: #FFF, $alpha: 0.3);
+            border: none;
+            box-shadow: 1px 2px 15px rgba($color: #000000, $alpha: 0.3);
+            text-align: center;
+            width: 100px;
+            height: 40px;
+            border: none;
+            background: rgba($color: #FFF, $alpha: 0.3);
+            font-size: 15px;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            &:active{
+                border: none;
+            }
+        }
+         .button:hover{
+            background: -webkit-linear-gradient(0deg,  #03a9f4, #4162f4, #763bff ,#03a9f4);
+            background-size: 400%;
+        }
+        .button::before{
+            content:"";
+            position:absolute;
+            background: inherit;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: none;
+
+            left: -5px;
+            border-radius: 50px;
+            /* 函数将高斯模糊应用于输入图像。radius 定义了高斯函数的标准偏差值，或者屏幕上有多少像素相互融合，
+            因此，较大的值将产生更多的模糊。若没有设置值，默认为0。该参数可以指定为 CSS 长度， */
+            filter: blur(20px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .container .button:hover:before{
+        z-index: -1;
+        opacity: 1;
+        }
+        .button:hover{
+            z-index: 1;
+            animation: float 8s linear infinite;
+        }
+        .button:active{
+            border: none;
+        }
+        @keyframes float{
+                0%{
+                    background-position: 0%;
+                }
+                100%{
+                    background-position:400%
+                }
+        }
+    }
+   
+}
+

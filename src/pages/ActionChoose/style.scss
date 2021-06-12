@@ -1,0 +1,137 @@
+@import '@/index.scss';
+.ModelBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+}
+
+.normalBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    margin: 0;
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+    // border-radius: 8px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+
+}
+.deleteBtn{
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+    &:hover{
+        // color: #ff0000;
+        box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+    }
+    
+}
+
+.actionChoose-container{
+    // background-image: url('./background1.jpg');
+    background-image: url('./visulization.jpg');
+
+    background-repeat: no-repeat;
+    -moz-background-size:100% 100%;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+
+    .action-container{
+        position: absolute;
+       
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        // width: 300px;
+        // padding: 50px 50px 80px 50px;
+        display: flex;
+        flex-direction: row; //水平排列
+        flex-wrap: nowrap; //不换行
+        justify-content : center; //项目在主轴上的对齐方式（居中）
+        align-items: center; //在交叉轴上如何对其
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+                list-style: none;
+                margin: 0 20px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.5);
+                box-shadow: 0px 15px 25px 0 rgba(201, 201, 201, 0.6),
+                             0px 0px 40px 0 rgba(170, 170, 170, 0.4);
+                border-radius: 25px;
+                backdrop-filter: flur(25px);
+                transition: 2s linear;
+                overflow: hidden;
+                position: relative;
+                width: 400px;
+                height: 250px;
+               
+                transition: 0.2s linear;
+                &:hover{
+                    width: 600px;
+                    height: 380px;
+                }
+            }
+            li::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 200px;
+                height: 100%;
+                z-index: 13;
+                background-color: rgba($color: #fff, $alpha: 0.5);
+                transform: skewX(45deg) translateX(550px);
+                transition: 0.5s linear;
+            }
+            li:nth-child(1){
+                div{
+                    position: relative;
+                    background-image: url('./item01.jpg');
+                    border-radius: 25px;
+                    background-size: 100% 100%;
+
+                    z-index: 10;
+                  
+                }
+                div::before{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 12;
+                    background-color: rgba($color: #FFF, $alpha: 0.1);
+                }
+
+            }
+            li:nth-child(2){
+                div{
+                    background-image: url('./item02.jpg');
+                    border-radius: 25px;
+                    background-size: 100% 100%;
+                    z-index: 10;
+                }
+                &::before{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 12;
+                    background-color: rgba($color: #FFF, $alpha: 0.1);
+                }
+            }
+            li:hover::before{
+                transform: skewX(45deg) translateX(-550px);
+            }
+        }
+         
+    }
+}
+
+

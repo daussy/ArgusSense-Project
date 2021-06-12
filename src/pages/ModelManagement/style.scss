@@ -1,0 +1,32 @@
+@import '@/index.scss';
+.ModelBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+}
+
+.normalBtn{
+    // background-color: rgba($color: #003459, $alpha: 1);
+    margin: 0;
+    color: $normalBtnColor;
+    border: 1px solid $normalBtnColor;
+    // border-radius: 8px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+
+}
+.deleteBtn{
+    box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+
+    &:hover{
+        // color: #ff0000;
+        box-shadow: 0px 0px 3px rgba($color: black, $alpha: 0.5);
+    }
+    
+}
+
+.model-management{
+    background-color: #fff;
+    padding: 10px;
+}

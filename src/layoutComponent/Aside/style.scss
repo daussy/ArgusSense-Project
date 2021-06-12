@@ -1,14 +1,16 @@
-.aside-container{
-    height: 100vh;
-    // display: flex;
+.asideContainer{
+    background-color:rgba($color: #1d3557, $alpha: 1) ;
+    height: 1150px;
     margin: 0px;
-    background-color: #20335d;
+    font-size: 15px;
     .title-container{
         width: 100%;
         // width: 230px;
         height: 56px;
         text-align: center;
         line-height: 56px;
+        background-color:#1d3557;
+
         .navbar-title{
             display: inline;
             width: 100%;
@@ -20,34 +22,102 @@
             font-size: 16px;
         }
     }
-  
     .nav{
-        a{
-            margin: 5px 0px;
+        // color: blanchedalmond;
+        .active-navlink{
+            background-color:rgba($color: black, $alpha: 0.6) ;
+            // background-color:#1d3557;
             color:#fff;
-            // background-color:rgba(6, 12, 72,0.8);
-            width: 100%;
-            /* border-bottom : 1px solid #fff ; */
-            /* border-top: 1px solid #fff ; */
-            // text-align: center;
-            /* font-family: 25px bolder; */
-            span{
-                position: relative;
-                left: 30px;
-                width: 50px;
-            }
-            &:hover{
-                background-color:rgba(15, 25, 50,1);
-                color:#fff;
-            }
-            &:active{
-                background-color:rgba(15, 25, 50,1);
-                color:#fff;
-                border-left: 5px solid #fff;
-            }
+            border-left: 5px solid #45789d;
+            box-shadow: 1px 1px 2px 2px rgba($color: black, $alpha: 0.3);
+
+        }
+      
+        .nav-link{
+                    margin: 0px 0px;
+                    // color:black;
+                    // background-color:rgba(6, 12, 72,0.8);
+                    width: 100%;
+                    line-height: 40px;
+                    height: 56px;
+                    // box-shadow: -2px 0 3px -1px black;
+                    span{
+                        position: relative;
+                        left: 30px;
+                        width: 50px;
+                    }
+                    &:hover{
+                        color:#fff;
+                        background-color:rgba($color: #171c20, $alpha: 0.6) ;
+
+                    }
+                    &:active{
+                        // background-color:#171c20;
+                        color:#fff;
+                        border-left: 5px solid #4291ca;
+                         background-color:rgba($color: #171c20, $alpha: 0.6) ;
+
+                    }
+                
+
+    
         }
 
-        
+        .collapse-nav{
+            width: 100%;
+            // font-size: 20px;
+            padding:0;
+            margin-left: 0;
+            // width: 230px;
+            // height: 56px;
+            // color: #fff !important;
+            background-color:rgba($color: 	#1d3557, $alpha:1) ;
+            box-shadow: 1px 1px 2px 2px rgba($color: #1d3557, $alpha: 0.3);
+            .collapse-panel{
+                // background-color:rgba($color: #E6E6FA, $alpha: 0.3) ;
+                // font-size: 18px;
+                // font-weight: bold;
+                color: #fff;
+                .active-panel{
+                    background-color:rgba($color: black, $alpha: 0.3) ;
+                }
+                .nav-link{
+                    margin: 0px 0px;
+                    color:#fff;
+                    font-size: 15px;
+                    font-weight: normal;
+                    // background-color:rgba(6, 12, 72,0.8);
+                    width: 100%;
+                    line-height: 40px;
+                    height: 56px;
+                    // box-shadow: -2px 0 3px -1px black;
+                    span{
+                        position: relative;
+                        left: 30px;
+                        width: 50px;
+                    }
+                    &:hover{
+                        color:#fff;
+                        background-color:rgba($color: #1d3557, $alpha: 1) ;
+
+                    }
+                    &:active{
+                        // background-color:#171c20;
+                        color:#fff;
+                        border-left: 5px solid #45789d;
+                         background-color:rgba($color: #1d3557, $alpha: 1) ;
+
+                    }
+                
+
+    
+        }
+
+            }
+        }
+     
     }
+
+   
 }
 

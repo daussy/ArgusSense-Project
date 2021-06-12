@@ -1,7 +1,12 @@
+// 标题
+.title{
+    font-size: 20px;
+}
+
 .nav-self{
     background-color: #ffffff;
     position: relative;
-    
+    height: 56px;
     #clock{
         position: absolute;
         left: -100px;
@@ -12,43 +17,84 @@
 }
 // serviceChoose 
 .narbar-nav-self1{
-    margin-left: 20px;
+    // margin-left: 20px;
+
+    // .active-navlink{
+    //     background-color: #e8e9ec;
+    //     color: #ffffff;
+    //     box-shadow: 1px 1px 2px 0px rgba($color: black, $alpha: 0.3);
+
+    // }
+    
+    .active-navlink{
+        // background-color:rgba($color: #21262a, $alpha: 0.6) ;
+        // background-color:#171c20;
+
+        color:#fff;
+        border: 1px solid #007ea7;
+        // box-shadow: 1px 1px 1px 1px rgba($color: black, $alpha: 1);
+
+    }
     .link-container{
         color: #538eda;
         text-decoration: none;
-        &:hover{
-            background-color:rgb(220, 232, 248);
-            color: #538eda;
+        text-decoration: none !important;
+
+        // &:hover{
+        //     background-color:rgb(220, 232, 248);
+        //     color: #538eda;
+
+        // }
+        // &:active{
+        //     background-color: #538eda;
+        //     text-decoration: none;
+        //     color: #ffffff;
+        // }
+
+      
+        &:active{
+            // background-color:#171c20;
+            color:#fff;
+            // border-left: 5px solid #4291ca;
+            //  background-color:rgba($color: #21262a, $alpha: 0.6) ;
 
         }
-        &:active{
-            background-color: #538eda;
-            color: #ffffff;
+        &:hover{
+            color:#fff;
+            background-color:rgba($color: #003459, $alpha: 1) ;
+
         }
+    
+
 
     }
+ 
 }
 
 //userNav
 .narbar-nav-self2{
-    position: absolute;
+    // position: absolute;
     // left: 600px;
-    right: 0px;
-    margin-right: 20px;
+    // right: 0px;
+    // margin-right: 20px;
+
     .link-container{
         border:1px solid #dce8f8;
-        color: #538eda;
+        text-decoration: none;
         border-radius: 5px;
         &:hover{
             background-color:rgb(220, 232, 248);
-            color: #ffffff;
+            color: #538eda;
+
         }
         &:active{
-            background-color: #538eda;
             color: #ffffff;
+            
+            background-color: #538eda;
         }
         &:any-link{
             color: #538eda;
+
 
         }
     }
